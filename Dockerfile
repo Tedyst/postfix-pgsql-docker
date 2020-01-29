@@ -1,3 +1,5 @@
 FROM debian:latest
 
-RUN sudo apt update && apt install postfix postfix-pgsql
+RUN apt update && apt install -y postfix postfix-pgsql
+
+CMD [ "postfix" ]

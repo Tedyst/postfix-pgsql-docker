@@ -1,0 +1,7 @@
+hosts = email-db
+user = myuser
+password = mypassword
+dbname = simplelogin
+
+query = SELECT 'emailhandler:20381' FROM custom_domain WHERE domain = '%s' AND verified=true 
+    UNION SELECT 'emailhandler:20381' WHERE '%s' = 'stoicatedy.ovh' LIMIT 1;

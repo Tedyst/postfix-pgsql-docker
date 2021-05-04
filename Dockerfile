@@ -15,4 +15,4 @@ ENV DB_HOST=email-db
 ENV EMAIL_HANDLER=email-emailhandler
 
 
-CMD [ "/bin/wrapper.sh" ]
+CMD [ "timeout", "12h", "bash", "/bin/wrapper.sh" ]

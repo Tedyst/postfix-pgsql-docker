@@ -4,4 +4,4 @@ password = mypassword
 dbname = simplelogin
 
 query = SELECT domain FROM custom_domain WHERE domain='%s' AND verified=true 
-    UNION SELECT '%s' WHERE '%s' = 'stoicatedy.ovh' LIMIT 1;
+    UNION SELECT '%s' WHERE '%s' = 'domain-address' LIMIT 1;

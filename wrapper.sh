@@ -6,6 +6,9 @@ sed -i "s/email-db/$DB_HOST_ADDR/g" /etc/postfix/pgsql-relay-domains.cf
 sed -i "s/email-db/$DB_HOST_ADDR/g" /etc/postfix/pgsql-transport-maps.cf
 sed -i "s/emailhandler/$EMAIL_HANDLER_ADDR/g" /etc/postfix/pgsql-transport-maps.cf
 
+sed -i "s/domain-address/$DOMAIN/g" /etc/postfix/pgsql-relay-domains.cf
+sed -i "s/domain-address/$DOMAIN/g" /etc/postfix/pgsql-transport-maps.cf
+
 cp -f /etc/services /var/spool/postfix/etc/services
 
 supervisord

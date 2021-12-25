@@ -4,4 +4,8 @@ password = mypassword
 dbname = simplelogin
 
 query = SELECT 'smtp:emailhandler:20381' FROM custom_domain WHERE domain = '%s' AND verified=true 
-    UNION SELECT 'smtp:emailhandler:20381' WHERE '%s' = 'domain-address' LIMIT 1;
+    UNION (
+        (SELECT 'smtp:emailhandler:20381' WHERE '%s' = 'tedyst.ro' LIMIT 1)
+        UNION
+        (SELECT 'smtp:emailhandler:20381' WHERE '%s' = 'stoicatedy.ovh' LIMIT 1)
+    );

@@ -13,7 +13,6 @@ RUN newaliases
 EXPOSE 25
 ENV DB_HOST=email-db
 ENV EMAIL_HANDLER=email-emailhandler
-ENV DOMAIN=tedyst.ro
 
 
 CMD [ "timeout", "12h", "bash", "/bin/wrapper.sh" ]
